@@ -4,25 +4,17 @@ void main(){
     runApp (const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-     const MyApp ({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
 
-     @override
-        Widget build (BuildContext context) {
-
-            return MaterialApp (
-                home:Scaffold(
-                  appBar: AppBar(  
-                    title:Text("Hello Flutter"),
-                    backgroundColor: Colors.blue,
-                ),
-                
-                  body: Container(),   
-                ),
-            );
-        }
-
-
-
-
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Text('Hello World!'),
+        ),
+      ),
+    );
+  }
 }
