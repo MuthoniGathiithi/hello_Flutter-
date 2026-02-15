@@ -17,10 +17,7 @@ class SecondPage extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: TextFormField(
               decoration: const InputDecoration(
-                labelText: "Name",
-                hintText: "Enter your name",
-                border: OutlineInputBorder(),
-                labelText: "Name",
+                labelText: "  Name",
                 hintText: "Enter your name",
                 border: OutlineInputBorder(),
               ),
