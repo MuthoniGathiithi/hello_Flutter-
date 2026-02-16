@@ -1,55 +1,39 @@
 import 'package:flutter/material.dart';
-import 'formPage.dart';
+import 'second_page.dart';
 
 void main() {
-  runApp(const MaterialApp(home: HomePage()));
+  runApp(const FirstPage());
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage ({super.key});
+class FirstPage extends StatelessWidget {
+  const FirstPage({super.key});
 
-
-  @override 
-
-  Widget build(BuildContext context)
-  {
-   
-
-   
-    return  Scaffold (
-      backgroundColor: Colors.black,
-    body: Center (
-
-      child:Column (
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+     home: Builder(
+  builder: (innerContext) => Scaffold(
+    backgroundColor: Colors.black,
+    body: Center(
+      child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-       Text ('Welcome to our app',
-      style : TextStyle (
-        color: Colors.white,
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-
+          const Text("Welcome to my app"),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                innerContext, // use innerContext here
+                MaterialPageRoute(builder: (context) => const SecondPage()),
+              );
+            },
+            child: const Text("Get Started"),
+          ),
+        ],
       ),
-      ),
-
-
-ElevatedButton(
-  onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => SecondPage()), // <-- your page 2 class
-    );
-  },
-  child: Text('Get Started'),
-),
-
-
-    ],
-
+    ),
   ),
 ),
-
-   );
-
-}
+    );
+  }
 }
