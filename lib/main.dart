@@ -27,7 +27,8 @@ class FirstPage extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const SecondPage()),
               );
             },
-            child: const Text("Get Started"),
+            child: const Text("Create an account
+            "),
           ),
         ],
       ),
